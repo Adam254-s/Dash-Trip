@@ -236,4 +236,4 @@ while True:
 
    #https://www.youtube.com/watch?v=AY9MnQ4x3zk 
 
-  #copy and paste python DashTrip.py into terminal
+  #copy and paste python DashTrip.py into terminal in Visual StudioCode
