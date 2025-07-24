@@ -234,6 +234,6 @@ while True:
     pygame.display.update()
     clock.tick(60)
 
-   #https://www.youtube.com/watch?v=AY9MnQ4x3zk 
+    # All Credits go to this video https://www.youtube.com/watch?v=AY9MnQ4x3zk 
 
-  #copy and paste python DashTrip.py into terminal in Visual StudioCode
+    #copy and paste python DashTrip.py into terminal in Visual StudioCode
