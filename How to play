@@ -10,8 +10,8 @@ https://code.visualstudio.com/download
 
 2. Once both are installed, open visual studio code and copy and paste the code onto the software and name the file DashTrip.py
 
-3. Create folders for three pictures, "graphics, font, and audio" then copy and paste those pictures to their respective folders.
+3. Create three folders for "graphics, font, and audio" then drag all files to their respective folders.
 
-4. Once everything's been downloaded, go to the terminal in Visual Studio code and copy and paste python DashTrip.py
+4. Once everything's been downloaded and dragged to their folders, go to terminal in Visual Studio code and copy and paste python DashTrip.py
 
 5. Enjoy the game! :D
