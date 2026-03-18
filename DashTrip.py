@@ -9,7 +9,9 @@ class Player(pygame.sprite.Sprite):
         super().__init__()
         player_walk_1 = pygame.image.load('graphics/player_walk_1.png').convert_alpha()
         player_walk_2 = pygame.image.load('graphics/player_walk_2.png').convert_alpha()
-        self.player_walk = [player_walk_1, player_walk_2]
+        player_walk_3 = pygame.image.load('graphics/player_walk_3.png').convert_alpha()
+        player_walk_4 = pygame.image.load('graphics/player_walk_4.png').convert_alpha()
+        self.player_walk = [player_walk_1, player_walk_2, player_walk_3, player_walk_4]
         self.player_index = 0
         self.player_jump = pygame.image.load('graphics/jump.png').convert_alpha()
 
@@ -18,7 +20,7 @@ class Player(pygame.sprite.Sprite):
         self.gravity = 0
 
         self.jump_sound = pygame.mixer.Sound('audio/audio_jump.mp3')
-        self.jump_sound.set_volume(0.5)
+        self.jump_sound.set_volume(0.5) # Volume of jump sound effect
 
     def player_input(self):
         keys = pygame.key.get_pressed()
@@ -70,15 +72,15 @@ class Obstacle(pygame.sprite.Sprite):
             self.rect.inflate_ip(-20, -10)
 
     def animation_state(self):
-        self.animation_index += 0.1 # How fast the characters move
+        self.animation_index += 0.1 # How fast the enemies animations move
         if self.animation_index >= len(self.frames):
             self.animation_index = 0 # must be at 0 to always be in range
         self.image = self.frames[int(self.animation_index)]
 
     def update(self):
         self.animation_state()
-        self.rect.x -= 6 # How fast the enemies are moving 
-        if self.rect.x <= -100:
+        self.rect.x -= 19 # How fast the enemies are moving 
+        if self.rect.x <= -70:
             self.kill()
 
 
@@ -109,7 +111,7 @@ def draw_text_with_outline(surface, text, font, main_color, outline_color, cente
 pygame.init()
 
 # 🟩 Updated screen resolution
-screen_width = 1380
+screen_width = 970
 screen_height = 690
 screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption('Dash Trip')
@@ -130,7 +132,7 @@ else:
 # Music
 bg_music = pygame.mixer.Sound('audio/music.mp3') # MUSIC CHANGE
 bg_music.set_volume(0.5)
-bg_music.play(loops= 1)
+bg_music.play(loops= 100)
 
 # Groups
 player = pygame.sprite.GroupSingle()
@@ -236,4 +238,4 @@ while True:
 
     # All Credits go to this video https://www.youtube.com/watch?v=AY9MnQ4x3zk 
 
-    #copy and paste python DashTrip.py into terminal in Visual StudioCode
+    #copy and paste "python DashTrip.py" into terminal
