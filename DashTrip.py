@@ -110,7 +110,7 @@ def draw_text_with_outline(surface, text, font, main_color, outline_color, cente
 # ====================== SETUP ======================
 pygame.init()
 
-# Updated screen resolution
+# 🟩 Updated screen resolution
 screen_width = 970
 screen_height = 690
 screen = pygame.display.set_mode((screen_width, screen_height))
@@ -140,7 +140,7 @@ player.add(Player())
 
 obstacle_group = pygame.sprite.Group()
 
-# Background & ground scaling
+# 🟩 Background & ground scaling
 sky_surface = pygame.image.load('graphics/Sky.png').convert()
 sky_surface = pygame.transform.scale(sky_surface, (screen_width, screen_height))
 
@@ -149,7 +149,7 @@ ground_surface = pygame.transform.scale(ground_surface, (screen_width, 100))
 
 ground_x_pos = 0
 
-# Menu assets adjusted
+# 🟩 Menu assets adjusted
 player_stand = pygame.image.load('graphics/player_stand.png').convert_alpha()
 player_stand = pygame.transform.scale2x(player_stand)
 player_stand_rect = player_stand.get_rect(center=(screen_width // 2, screen_height // 2 - 50))
